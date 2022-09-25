@@ -1,0 +1,12 @@
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/Encrypt
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/appsettings.Development.json
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/appsettings.json
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/Encrypt.dll
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/Encrypt.deps.json
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/Encrypt.runtimeconfig.json
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/Encrypt.pdb
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/BouncyCastle.Crypto.dll
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/Microsoft.OpenApi.dll
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/Swashbuckle.AspNetCore.Swagger.dll
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Volumes/YCH_SSD/proyectos/sociosenred/Encrypt/publish/Swashbuckle.AspNetCore.SwaggerUI.dll
