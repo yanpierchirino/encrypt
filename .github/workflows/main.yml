@@ -21,7 +21,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: docker build
         run: |
-          docker build . -t $DOCKER_USER/encrypt-microservice:latest
+          docker build ./Encrypt -t $DOCKER_USER/encrypt-microservice:latest
       - name: docker push
         run: |
           docker push $DOCKER_USER/encrypt-microservice:latest
