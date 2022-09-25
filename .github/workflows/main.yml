@@ -27,7 +27,7 @@ jobs:
           docker push $DOCKER_USER/encrypt-microservice:latest
       - name: docker cp latest
         run: |
-          docker tag $DOCKER_USER/encrypt-microservice:1.0-${{ steps.date.outputs.date }} $DOCKER_USER/encrypt-microservice:latest
+          docker tag $DOCKER_USER/encrypt-microservice:latest $DOCKER_USER/encrypt-microservice:1.0-${{ steps.date.outputs.date }}
       - name: docker push latest
         run: |
           docker push $DOCKER_USER/encrypt-microservice:1.0-${{ steps.date.outputs.date }}
