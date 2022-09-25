@@ -1,0 +1,33 @@
+name: Encrypt-Microservice PROD
+
+on:
+  push:
+    branches: [ 1.0 ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DOCKER_USER: ${{ secrets.DOCKER_USER }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - name: docker login
+        run: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+
+      # Runs a single command using the runners shell
+      - name: docker build
+        run: |
+          docker build . -t $DOCKER_USER/encrypt-microservice:${{ steps.date.outputs.date }}
+      - name: docker push
+        run: |
+          docker push $DOCKER_USER/encrypt-microservice:${{ steps.date.outputs.date }}
+      - name: docker cp latest
+        run: |
+          docker tag $DOCKER_USER/encrypt-microservice:latest $DOCKER_USER/encrypt-microservice:${{ steps.date.outputs.date }}
+      - name: docker push latest
+        run: |
+          docker push $DOCKER_USER/encrypt-microservice:latest

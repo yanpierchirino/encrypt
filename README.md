@@ -7,7 +7,7 @@
 ## Configuración de su entorno de desarrollo
 Independientemente de la plataforma, debe tener acceso una copia desprotegida del código.
 
-## Endpoint
+## Endpoint Python Example:
 ```
 import requests
 import json
@@ -27,3 +27,6 @@ response = requests.request("POST", url, headers=headers, data=payload)
 
 print(response.text)
 ```
+
+## How RUN the docker image
+`docker run -p 5000:80 --name restapi docker yanpierchirino/encrypt-microservice:latest`
