@@ -21,13 +21,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: docker build
         run: |
-          docker build . -t $DOCKER_USER/encrypt-microservice:${{ steps.date.outputs.date }}
+          docker build . -t $DOCKER_USER/encrypt-microservice:latest
       - name: docker push
         run: |
-          docker push $DOCKER_USER/encrypt-microservice:${{ steps.date.outputs.date }}
+          docker push $DOCKER_USER/encrypt-microservice:latest
       - name: docker cp latest
         run: |
-          docker tag $DOCKER_USER/encrypt-microservice:latest $DOCKER_USER/encrypt-microservice:${{ steps.date.outputs.date }}
+          docker tag $DOCKER_USER/encrypt-microservice:${{ steps.date.outputs.date }} $DOCKER_USER/encrypt-microservice:latest
       - name: docker push latest
         run: |
-          docker push $DOCKER_USER/encrypt-microservice:latest
+          docker push $DOCKER_USER/encrypt-microservice:${{ steps.date.outputs.date }}
